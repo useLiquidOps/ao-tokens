@@ -1,7 +1,7 @@
 {
-  "name": "ao-tokens",
+  "name": "ao-tokens-lite",
   "version": "0.0.6",
-  "repository": "https://github.com/martonlederer/ao-tokens",
+  "repository": "https://github.com/useliquidops/ao-tokens",
   "author": "Marton Lederer <marton@lederer.hu>",
   "license": "MIT",
   "private": false,
