@@ -1,6 +1,6 @@
 {
   "name": "ao-tokens-lite",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "repository": "https://github.com/useliquidops/ao-tokens",
   "author": "Marton Lederer <marton@lederer.hu>",
   "license": "MIT",
@@ -12,8 +12,8 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/ao-tokens.cjs",
-  "module": "./dist/ao-tokens.js",
+  "main": "./dist/ao-tokens-lite.cjs",
+  "module": "./dist/ao-tokens-lite.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
