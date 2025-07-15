@@ -17,8 +17,8 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ao-tokens.js",
-      "require": "./dist/ao-tokens.cjs",
+      "import": "./dist/ao-tokens-lite.js",
+      "require": "./dist/ao-tokens-lite.cjs",
       "types": "./dist/index.d.ts"
     }
   },
