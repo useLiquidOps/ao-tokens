@@ -12,14 +12,6 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/index.ts"),
       name: packageJson.name,
       formats: ["es", "cjs"]
-    },
-    rollupOptions: {
-      external: ["@permaweb/aoconnect"],
-      output: {
-        globals: {
-          "@permaweb/aoconnect": "aoconnect"
-        }
-      }
     }
   }
 });
