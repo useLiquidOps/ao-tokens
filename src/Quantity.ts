@@ -1,5 +1,3 @@
-import { type TokenInstance } from "./Token";
-
 export default class Quantity {
   // base quantity
   #qty: bigint;
@@ -8,7 +6,7 @@ export default class Quantity {
   #D: bigint;
 
   /**
-   * Parse or load 
+   * Parse or load
    * @param base Quantity in integer/non-denominated format or string
    * @param denomination Denomination that belongs to the token
    */
@@ -40,7 +38,7 @@ export default class Quantity {
         if (!Quantity.isQuantity(base)) {
           throw new Error("Could not convert object to quantity");
         }
-        
+
         base = base.clone();
         base._convert(this.#D);
         this.#qty = base.#qty;
@@ -87,18 +85,6 @@ export default class Quantity {
    */
   static isQuantity(val: unknown): val is Quantity {
     return typeof val === "object" && val instanceof Quantity;
-  }
-  
-  /**
-   * Check if a value is a quantity of a token process
-   * (this only works if the token info has been loaded)
-   * @param val Value to check
-   * @param token Token process instance
-   * @returns Valid or not
-   */
-  static isQuantityOf(val: Quantity, token: TokenInstance) {
-    if (!Quantity.isQuantity(val)) return false;
-    return token.info.Denomination === val.#D;
   }
 
   /**
@@ -159,7 +145,7 @@ export default class Quantity {
 
   /**
    * Format a quantity as a floating point number string,
-   * while keeping precision (using the provided 
+   * while keeping precision (using the provided
    * denomination)
    * @param options Optinal formatting for the number
    * @returns Formatted string
@@ -210,7 +196,7 @@ export default class Quantity {
 
   /**
    * Format a quantity as a floating point number string,
-   * while keeping precision (using the provided 
+   * while keeping precision (using the provided
    * denomination)
    */
   toString() {
@@ -564,7 +550,7 @@ export default class Quantity {
     if (quantities.length === 0) {
       return undefined;
     }
-    
+
     return quantities.reduce(
       (prev, curr) => {
         const [a, b] = this.sameDenomination(prev, curr);
@@ -583,11 +569,11 @@ export default class Quantity {
     if (quantities.length === 0) {
       return undefined;
     }
-      
+
     return quantities.reduce(
       (prev, curr) => {
         const [a, b] = this.sameDenomination(prev, curr);
-  
+
         return this.lt(a, b) ? curr : prev;
       }
     );
